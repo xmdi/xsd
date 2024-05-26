@@ -8,6 +8,8 @@ function []=checkPoint(point)
     error("Point has invalid visibility.");
   elseif ~isfield(point,'color');
     error("Point is missing color attribute.");
+  elseif (point.tag~=1)
+    error("Point has invalid tag.");
   end
 
 end

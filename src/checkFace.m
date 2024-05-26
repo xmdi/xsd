@@ -10,6 +10,8 @@ function []=checkFace(face)
     error("Mismatch in face x and y dimensions.");
   elseif ~isfield(face,'color');
     error("Face is missing color attribute.");
+  elseif (face.tag~=3)
+    error("Face has invalid tag.");
   end
 
 end

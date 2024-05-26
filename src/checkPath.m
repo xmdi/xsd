@@ -10,7 +10,8 @@ function []=checkPath(path)
     error("Mismatch in path x and y dimensions.");
   elseif ~isfield(path,'color');
     error("Path is missing color attribute.");
-  end
+  elseif (path.tag~=2)
+    error("Path has invalid tag.");
   end
 
 end

@@ -1,8 +1,8 @@
-function [path]=createPathfromPoints(points)
+function [path]=createPathFromPoints(points)
 
   global section
 
-  path=struct('x',[],'y',[],'visibility',true,'color','g');
+  path=struct('x',[],'y',[],'visibility',true,'color','g','tag',2);
 
   for i=1:length(points)
     path.x=[path.x points(i).x];
