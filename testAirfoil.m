@@ -32,7 +32,9 @@ chord=createPathFromPoints([LE,TE_middle]);
 UAF_face=createFaceFromPaths([UAF,chord,TE_split_top]);
 LAF_face=createFaceFromPaths([LAF,TE_split_bot,chord]);
 
-setVisibilities([LE0,LE1,LESplitPath,TE0,TE1,TESplitPath,PointAbove,PointBelow,LE,TE_UAF,TE_LAF,TE_middle],false);
+highestPoint=getNearestPoint(UAF,PointAbove)
+
+%setVisibilities([LE0,LE1,LESplitPath,TE0,TE1,TESplitPath,PointAbove,PointBelow,LE,TE_UAF,TE_LAF,TE_middle],false);
 setFaceColor(UAF_face,'m');
 
 UAF_skin=offsetPath(UAF,-.01);

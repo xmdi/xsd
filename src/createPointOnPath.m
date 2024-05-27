@@ -13,11 +13,9 @@ function [point]=createPointOnPath(path,d,mode)
       error("Ratio exceeds 1.");
     elseif d==0
       point=createPointInSpace(path.x(1),path.y(1));
-      section.points=[section.points point];
       return
     elseif d==1
       point=createPointInSpace(path.x(end),path.y(end));
-      section.points=[section.points point];
       return
     end
     d=d*L;
@@ -49,7 +47,5 @@ function [point]=createPointOnPath(path,d,mode)
       L0=L0+dL;
     end
   endif
-
-  section.points=[section.points point];
 
 end

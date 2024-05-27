@@ -6,7 +6,8 @@ clc
 
 global section
 section=initSection(0,0,0,0);
-testAirfoil;
+%testAirfoil;
+hollowWingSection(.01,.2,.4,.65);
 drawSection;
 
 %

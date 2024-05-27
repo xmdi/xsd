@@ -1,5 +1,7 @@
 function [P]=naca4(naca4_airfoil)
 
+  % number of panels describes number of linear segments on each surface
+
 	m=str2num(naca4_airfoil.ID(1))/100;
 	p=str2num(naca4_airfoil.ID(2))/10;
 	t=str2num(naca4_airfoil.ID(3:4))/100;

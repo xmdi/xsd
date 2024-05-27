@@ -10,8 +10,8 @@ function [face]=createFaceFromPaths(paths)
       x=[x paths(i).x(2:end)];
       y=[y paths(i).y(2:end)];
     elseif (x(end)==paths(i).x(end))&&(y(end)==paths(i).y(end))
-      x=[x flipud(paths(i).x(1:end-1))];
-      y=[y flipud(paths(i).y(1:end-1))];
+      x=[x fliplr(paths(i).x(1:end-1))];
+      y=[y fliplr(paths(i).y(1:end-1))];
     else
       error('Path %d and Path %d disconnected.',i-1,i);
     endif
