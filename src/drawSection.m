@@ -27,5 +27,4 @@ function []=drawSection()
 
   axis equal
 
-
 end
