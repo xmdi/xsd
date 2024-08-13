@@ -1,6 +1,4 @@
-function [path]=createPathFromPoints(points)
-
-  global section
+function [path,section]=createPathFromPoints(section,points)
 
   path=struct('x',[],'y',[],'visibility',true,'color','g','tag',2);
 

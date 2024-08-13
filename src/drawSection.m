@@ -1,6 +1,4 @@
-function []=drawSection()
-
-  global section
+function []=drawSection(section)
 
   figure
   hold on

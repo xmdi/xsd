@@ -1,6 +1,4 @@
-function [point]=getNearestPoint(path,referencePoint)
-
-  global section
+function [point,section]=getNearestPoint(section,path,referencePoint)
 
   point=struct('x',[],'y',[],'visibility',true,'color','k','tag',1);
   d=Inf;

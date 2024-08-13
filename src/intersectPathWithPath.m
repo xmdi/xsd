@@ -1,6 +1,4 @@
-function [point]=intersectPathWithPath(path1,path2,referencePoint)
-
-  global section
+function [point,section]=intersectPathWithPath(section,path1,path2,referencePoint)
 
   point=struct('x',[],'y',[],'visibility',true,'color','k','tag',1);
 

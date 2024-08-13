@@ -1,6 +1,4 @@
-function [point]=setPointVisibility(point,value)
-
-  global section
+function [point,section]=setPointVisibility(section,point,value)
 
   for i=1:length(section.points)
     if ((section.points(i).x==point.x)&&(section.points(i).y==point.y))

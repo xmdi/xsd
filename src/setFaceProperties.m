@@ -1,6 +1,4 @@
-function setFaceProperties(face,material)
-
-  global section
+function [section]=setFaceProperties(section,face,material)
 
   if strcmp(material,"Aluminum")
     face.E=10e6;

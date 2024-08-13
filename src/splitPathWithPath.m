@@ -1,6 +1,4 @@
-function [path]=splitPathWithPath(path1,path2,referencePoint)
-
-  global section
+function [path,section]=splitPathWithPath(section,path1,path2,referencePoint)
 
   path=struct('x',[],'y',[],'visibility',true,'color','g','tag',2);
 

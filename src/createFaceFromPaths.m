@@ -1,6 +1,4 @@
-function [face]=createFaceFromPaths(paths)
-
-  global section
+function [face,section]=createFaceFromPaths(section,paths)
 
   x=[paths(1).x];
   y=[paths(1).y];

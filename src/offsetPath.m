@@ -1,6 +1,4 @@
-function [path]=offsetPath(path1,d)
-
-  global section
+function [path,section]=offsetPath(section,path1,d)
 
   path=struct('x',zeros(size(path1.x)),'y',zeros(size(path1.y)),'visibility',true,'color','g','tag',2);
 

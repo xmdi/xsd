@@ -1,6 +1,4 @@
-function [point]=setPointColor(point,value)
-
-  global section
+function [point,section]=setPointColor(section,point,value)
 
   for i=1:length(section.points)
     if ((section.points(i).x==point.x)&&(section.points(i).y==point.y))

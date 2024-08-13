@@ -1,7 +1,5 @@
-function [point]=createPointOnPath(path,d,mode)
+function [point,section]=createPointOnPath(section,path,d,mode)
 %in progress
-
-  global section
 
   D=diff([path.x' path.y']);
   L=sum(sqrt(sum(D.^2,2)));
@@ -12,10 +10,10 @@ function [point]=createPointOnPath(path,d,mode)
     elseif d>1
       error("Ratio exceeds 1.");
     elseif d==0
-      point=createPointInSpace(path.x(1),path.y(1));
+      point=createPointInSpace(section,path.x(1),path.y(1));
       return
     elseif d==1
-      point=createPointInSpace(path.x(end),path.y(end));
+      point=createPointInSpace(section,path.x(end),path.y(end));
       return
     end
     d=d*L;
@@ -24,7 +22,7 @@ function [point]=createPointOnPath(path,d,mode)
       dL=sqrt((path.x(i+1)-path.x(i))^2+(path.y(i+1)-path.y(i))^2);
       if (L0+dL)>d
         pt=(d-L0)/dL*[(path.x(i+1)-path.x(i)) (path.y(i+1)-path.y(i))]+[path.x(i) path.y(i)];
-        point=createPointInSpace(pt(1),pt(2));
+        point=createPointInSpace(section,pt(1),pt(2));
         break
       end
       L0=L0+dL;
@@ -41,7 +39,7 @@ function [point]=createPointOnPath(path,d,mode)
       dL=sqrt((path.x(i+1)-path.x(i))^2+(path.y(i+1)-path.y(i))^2);
       if (L0+dL)>d
         pt=(d-L0)/dL*[(path.x(i+1)-path.x(i)) (path.y(i+1)-path.y(i))]+[path.x(i) path.y(i)];
-        point=createPointInSpace(pt(1),pt(2));
+        point=createPointInSpace(section,pt(1),pt(2));
         break
       end
       L0=L0+dL;

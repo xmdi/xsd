@@ -1,6 +1,4 @@
-function [path]=createPathFromArray(P)
-
-  global section
+function [path,section]=createPathFromArray(section,P)
 
   path=struct('x',[],'y',[],'visibility',true,'color','g','tag',2);
 
