@@ -1,4 +1,4 @@
-function [face,section]=setVisibilities(section,objects,value)
+function [section]=setVisibilities(section,objects,value)
 
   for j=1:length(objects)
     if (objects(j).tag==1)
