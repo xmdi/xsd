@@ -106,7 +106,4 @@ P(:,1)=P(:,1)-chord/4;
 [section]=setFaceProperties(section,spar2_face,"Aluminum");
 [section]=setFaceProperties(section,spar3_face,"Aluminum");
 
-
-9
-
 end
