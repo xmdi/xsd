@@ -18,6 +18,14 @@ end
   %x_bounds(end+1)=x_bounds(1);
   %y_bounds(end+1)=y_bounds(1);
 
+  s=[pi/4,pi/4,pi/4,pi/4,pi/4,pi/4]
+
+  % loop a bunch
+
+  % classify each node on the boundary:
+
+
+
   % test plot of the boundary nodes
   figure(1)
   plot(x_bounds,y_bounds,'ok')
