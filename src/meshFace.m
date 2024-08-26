@@ -20,9 +20,15 @@ end
 
   s=[pi/4,pi/4,pi/4,pi/4,pi/4,pi/4]
 
+  paving_boundary=[x_bounds' y_bounds']; % init paving boundary
   % loop a bunch
-
-  % classify each node on the boundary:
+  while size(paving_boundary,1)>0
+    % classify each node on the boundary:
+    for i=2:(size(paving_boundary,1)-1) % really needs to start at 1, add something above this
+      interiorAngle(paving_boundary(i-1,1),paving_boundary(i-1,2),paving_boundary(i,1),paving_boundary(i,2),paving_boundary(i+1,1),paving_boundary(i+1,2))
+    end
+    paving_boundary=[];
+  endwhile
 
 
 
