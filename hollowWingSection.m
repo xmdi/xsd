@@ -10,6 +10,24 @@ P=naca4(naca_airfoil);
 P=P*chord;
 P(:,1)=P(:,1)-chord/4;
 
+%%%
+[P0,section]=createPointInSpace(section,0,1);
+[P1,section]=createPointInSpace(section,1,1.1);
+[P2,section]=createPointInSpace(section,4,.5);
+[P3,section]=createPointInSpace(section,5,2.5);
+
+[L0,section]=createPathFromPoints(section,[P0,P1]);
+[L1,section]=createPathFromPoints(section,[P2,P3]);
+m0=getSlopeFromPoints(P0,P1)
+m1=getSlopeFromPoints(P2,P3)
+
+[S1,section]=createSplineFromPoints(section,[P1,P2],[m0,m1],200);
+
+drawSection(section);
+%%%
+
+
+
 [airfoilSurface,section]=createPathFromArray(section,P);
 
 [skin_IML,section]=offsetPath(section,airfoilSurface,skinThickness);
